@@ -182,6 +182,17 @@ onload = function(){
       gl.vertexAttribPointer(attL[i], attS[i], gl.FLOAT, false, 0, 0);
     }
   }
+script src="three.min.js"></script>
+<script>
+var main = function () {
+ window.addEventListener( 'DOMContentLoaded', main, false );
+</script>
+	
+var main = function () {
+  var scene = new THREE.Scene();
+};
+
+	
 var renderer = new THREE.WebGLRenderer();
   renderer.setSize( width, height );
   document.body.appendChild( renderer.domElement );
@@ -195,5 +206,8 @@ var renderer = new THREE.WebGLRenderer();
   var mesh = new THREE.Mesh( geometry, material );
 	
  renderer.render(　);	
+};
+ 
+
 };
 };
