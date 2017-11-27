@@ -191,7 +191,18 @@ var main = function () {
 var main = function () {
   var scene = new THREE.Scene();
 };
-
+	
+	
+var width  = 600;
+  var height = 400;
+  var fov    = 60;
+  var aspect = width / height;
+  var near   = 1;
+  var far    = 1000;
+  var camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
+  camera.position.set( 0, 0, 50 );
+	
+	
 	
 var renderer = new THREE.WebGLRenderer();
   renderer.setSize( width, height );
@@ -205,7 +216,7 @@ var renderer = new THREE.WebGLRenderer();
   var material = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
   var mesh = new THREE.Mesh( geometry, material );
 	
- renderer.render(　);	
+ renderer.render(scene,camera　);	
 };
  
 
