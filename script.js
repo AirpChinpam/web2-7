@@ -182,4 +182,15 @@ onload = function(){
       gl.vertexAttribPointer(attL[i], attS[i], gl.FLOAT, false, 0, 0);
     }
   }
+	var main = function () {
+  ( function renderLoop () {
+    requestAnimationFrame( renderLoop );
+    mesh.rotation.set(
+      0,
+      mesh.rotation.y + 0.01,
+      mesh.rotation.z + 0.01
+    )
+    renderer.render( scene, camera );
+  } )();
+};
 };
