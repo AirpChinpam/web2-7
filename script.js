@@ -1,3 +1,20 @@
+var Particle = function(scale, color, speed) {
+    this.scale = scale; //大きさ
+    this.color = color; //色
+    this.speed = speed; //速度
+    this.position = {   //位置
+        x: 100,
+        y: 100
+    };
+};
+ 
+Particle.prototype.draw = function() {
+    ctx.beginPath();
+    ctx.arc(this.position.x, this.position.y, this.scale, 0, 2*Math.PI, false);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+};
+
 onload = function(){
   // canvasエレメントを取得
   var c = document.getElementById('canvas');
