@@ -32,7 +32,7 @@ onload = function(){
   ];
   var color = [
     1.0, 0.0, 0.0, 1.0,
-    1.0, 0.0, 0.0, 1.0,
+    0.0, 1.0, 0.0, 1.0,
     0.0, 0.0, 1.0, 1.0
   ];
 
@@ -182,5 +182,4 @@ onload = function(){
       gl.vertexAttribPointer(attL[i], attS[i], gl.FLOAT, false, 0, 0);
     }
   }
-};
 };
