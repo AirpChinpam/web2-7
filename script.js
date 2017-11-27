@@ -182,6 +182,18 @@ onload = function(){
       gl.vertexAttribPointer(attL[i], attS[i], gl.FLOAT, false, 0, 0);
     }
   }
-
+var renderer = new THREE.WebGLRenderer();
+  renderer.setSize( width, height );
+  document.body.appendChild( renderer.domElement );
+	
+ var directionalLight = new THREE.DirectionalLight( 0xffffff );
+  directionalLight.position.set( 0, 0.7, 0.7 );
+  scene.add( directionalLight );	
+	
+ var geometry = new THREE.CubeGeometry( 30, 30, 30 );
+  var material = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
+  var mesh = new THREE.Mesh( geometry, material );
+	
+ renderer.render( scene, camera );	
 };
 };
