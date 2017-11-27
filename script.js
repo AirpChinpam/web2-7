@@ -182,7 +182,6 @@ onload = function(){
       gl.vertexAttribPointer(attL[i], attS[i], gl.FLOAT, false, 0, 0);
     }
   }
-
 };
 };
 };
