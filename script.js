@@ -194,6 +194,6 @@ var renderer = new THREE.WebGLRenderer();
   var material = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
   var mesh = new THREE.Mesh( geometry, material );
 	
- renderer.render( scene, camera );	
+ renderer.render(　);	
 };
 };
