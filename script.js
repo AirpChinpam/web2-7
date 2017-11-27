@@ -8,6 +8,23 @@ var Particle = function(scale, color, speed) {
     };
 };
  
+var canvas = document.querySelector('#canvas-container');
+var ctx = canvas.getContext('2d');
+var patricle = new Particle(6, '#D0A000', 2);
+ 
+loop();
+function loop() {
+    requestAnimFrame(loop);
+    // 描画をクリアー
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+ 
+    patricle.position.x += patricle.speed;
+    patricle.draw();
+ 
+    // 画面外に出たら左へ戻る
+    if (patricle.position.x > canvas.width) patricle.position.x = -30;
+}
+
 Particle.prototype.draw = function() {
     ctx.beginPath();
     ctx.arc(this.position.x, this.position.y, this.scale, 0, 2*Math.PI, false);
